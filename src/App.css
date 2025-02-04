@@ -7,12 +7,60 @@
   background-color: aqua;
   width: 200px;
 }
+.SideBarFooter {
+  text-align: center;
+  padding: 10px;
+}
 
 .MemoContainer {
   background-color: beige;
   flex: 1;
 }
+.MemoItem {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  position: relative;
+}
 
+.MemoItem_delete-button {
+  background: none;
+  border: none;
+  color: red;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top: auto;
+  display: none;
+}
+
+.MemoItem:hover .MemoItem_delete-button {
+  display: inline-block;
+}
+
+.SideBarFooter_add-button {
+  background: none;
+  border: 2px solid #555;
+  color: #555;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.MemoItem.selected {
+  background-color: rgba(100, 100, 100, 0.3);
+  font-weight: 500;
+}
 .MemoContainer_Title {
   width: 100%;
   box-sizing: border-box;
